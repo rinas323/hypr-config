@@ -1,0 +1,25 @@
+# General Settings
+show_actions=false
+width=600
+height=400
+lines=10
+location=top
+hide_scroll=true
+allow_images=true
+insensitive=true
+prompt=Run:
+font=JetBrainsMono Nerd Font 12
+normal_window=true
+
+# Colors (Matching Your Red & Orange Theme)
+border=3
+border_color=#FF4500  # Orange-Red
+background=#1A1A1A    # Dark background
+text=#FFFFFF          # White text
+selection_color=#FF6347  # Light Red (Tomato)
+selection_text_color=#1A1A1A  # Dark text for contrast
+
+# Rounded Corners & Shadow
+border_radius=10
+shadow=true
+

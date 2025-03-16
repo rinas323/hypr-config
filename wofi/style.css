@@ -1,0 +1,29 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 14px;
+}
+
+window {
+    background-color: rgba(26, 26, 26, 0.95); /* Dark background with transparency */
+    border: 2px solid #FF4500; /* Orange-Red border */
+    border-radius: 10px;
+}
+
+#entry {
+    color: #FFFFFF; /* White text */
+    background-color: transparent;
+}
+
+#entry:selected {
+    background-color: #FF6347; /* Light Red */
+    color: #1A1A1A; /* Dark text */
+    border-radius: 5px;
+}
+
+#input {
+    color: #FFFFFF;
+    background-color: rgba(255, 69, 0, 0.8); /* Orange-Red input field */
+    border-radius: 5px;
+    padding: 5px;
+}
+
