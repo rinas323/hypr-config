@@ -20,8 +20,8 @@ To install this configuration, use the provided install script.
 ### Steps:
 1. Clone this repository:
    ```sh
-   git clone https://github.com/rinas323/hyprland-config.git
-   cd hyprland-config
+   git clone https://github.com/rinas323/hypr-config.git
+   cd hypr-config
    ```
 2. Make the install script executable:
    ```sh
