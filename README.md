@@ -36,7 +36,7 @@ The script will:
 - Check and install required dependencies.
 - Backup existing configurations to `~/.config/backup/`.
 - Copy the new configuration files to `~/.config/`.
-- Copy the wallpaper to `~/.config/hyprland/wallpapers/`.
+- Copy the wallpaper to `~/.config/hyprland/`.
 
 ## Dependencies
 
