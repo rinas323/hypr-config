@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # List of required dependencies
-dependencies=(starship wofi waybar hyprpaper hyprlock hypridle hyprshot)
+dependencies=(starship wofi waybar hyprpaper hyprlock hypridle hyprshot kitty)
 
 # Function to check and install missing dependencies
 install_dependencies() {
@@ -46,7 +46,7 @@ backup_and_copy "hyprland" "~/.config/hyprland"
 backup_and_copy "waybar" "~/.config/waybar"
 backup_and_copy "wofi" "~/.config/wofi"
 backup_and_copy "starship.toml" "~/.config/starship.toml"
-
+backup_and_copy "kitty" "~/.config/kitty"
 # Copy wallpaper to .config root
 cp cosmic.jpg ~/.config/
 echo "Wallpaper copied to ~/.config/cosmic.jpg"
