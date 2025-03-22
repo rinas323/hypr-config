@@ -34,7 +34,7 @@ To install this configuration, use the provided install script.
 
 The script will:
 - Check and install required dependencies.
-- Backup existing configurations to `~/.config/backup_YYYYMMDD_HHMMSS/`.
+- Backup existing configurations to `~/.config/backup/`.
 - Copy the new configuration files to `~/.config/`.
 - Copy the wallpaper to `~/.config/hyprland/wallpapers/`.
 
