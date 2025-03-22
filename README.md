@@ -1,26 +1,46 @@
-# My Hyprland Configuration
+# Hyprland Configuration
 
-This repository contains my configuration files for Hyprland, Waybar, and Wofi.
+This is my Hyprland configuration, including Waybar and Wofi.
 
 ## Screenshots
+
 ### Desktop
-![Desktop Screenshot](desktop.png)
+![Desktop](desktop.png)
 
 ### Wofi
-![Wofi Screenshot](wofi.png)
+![Wofi](wofi.png)
 
 ### Terminal
-![Terminal Screenshot](terminal.png)
+![Terminal](terminal.png)
 
 ## Installation
-To use this configuration, simply copy the files into your `~/.config/` directory:
 
-```bash
-cp -r .config/* ~/.config/
-```
+To install this configuration, use the provided install script.
+
+### Steps:
+1. Clone this repository:
+   ```sh
+   git clone https://github.com/yourusername/hyprland-config.git
+   cd hyprland-config
+   ```
+2. Make the install script executable:
+   ```sh
+   chmod +x install.sh
+   ```
+3. Run the install script:
+   ```sh
+   ./install.sh
+   ```
+
+The script will:
+- Check and install required dependencies.
+- Backup existing configurations to `~/.config/backup_YYYYMMDD_HHMMSS/`.
+- Copy the new configuration files to `~/.config/`.
+- Copy the wallpaper to `~/.config/hyprland/wallpapers/`.
 
 ## Dependencies
-Make sure the following packages are installed:
+
+Ensure you have the following dependencies installed (the script will install them if missing):
 - `starship`
 - `wofi`
 - `waybar`
@@ -29,25 +49,6 @@ Make sure the following packages are installed:
 - `hypridle`
 - `hyprshot`
 
-### Install Missing Dependencies
-If any of these packages are missing, install them using your package manager:
-
-#### Arch Linux (Pacman)
-```bash
-sudo pacman -S starship wofi waybar hyprpaper hyprlock hypridle hyprshot
-```
-
-#### Debian/Ubuntu (if available via apt)
-```bash
-sudo apt install starship wofi waybar hyprpaper hyprlock hypridle hyprshot
-```
-
-#### NixOS (if using Nix)
-```bash
-nix-env -iA nixpkgs.starship nixpkgs.wofi nixpkgs.waybar nixpkgs.hyprpaper nixpkgs.hyprlock nixpkgs.hypridle nixpkgs.hyprshot
-```
-
 ## Reference
-The Waybar configuration was adapted from [mechabar](https://github.com/sejjy/mechabar.git).
-
+The Waybar configuration was adapted from [MechaBar](https://github.com/sejjy/mechabar.git).
 
