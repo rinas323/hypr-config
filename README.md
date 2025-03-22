@@ -20,7 +20,7 @@ To install this configuration, use the provided install script.
 ### Steps:
 1. Clone this repository:
    ```sh
-   git clone https://github.com/yourusername/hyprland-config.git
+   git clone https://github.com/rinas323/hyprland-config.git
    cd hyprland-config
    ```
 2. Make the install script executable:
