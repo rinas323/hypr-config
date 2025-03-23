@@ -48,6 +48,7 @@ Ensure you have the following dependencies installed (the script will install th
 - `hyprlock`
 - `hypridle`
 - `hyprshot`
+- `kitty`
 
 ## Reference
 The Waybar configuration was adapted from [MechaBar](https://github.com/sejjy/mechabar.git).
