@@ -55,7 +55,7 @@ The Waybar configuration was adapted from [MechaBar](https://github.com/sejjy/me
 
 
 ## Note  
-This script now supports **Arch**, **Debian**, and **Red Hat-based** systems.  
+This script supports **Arch**, **Debian**, and **Red Hat-based** systems.  
 It will automatically detect your package manager and install the required dependencies.  
 
 If you encounter issues, you can manually copy the configuration files using:  
