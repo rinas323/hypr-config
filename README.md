@@ -54,11 +54,11 @@ Ensure you have the following dependencies installed (the script will install th
 The Waybar configuration was adapted from [MechaBar](https://github.com/sejjy/mechabar.git).
 
 
-## ⚠️ Warning  
-This script is designed for **Arch-based systems** only.  
+## Warning  
+This script now supports **Arch**, **Debian**, and **Red Hat-based** systems.  
+It will automatically detect your package manager and install the required dependencies.  
 
-For other Linux distributions, manually copy the configuration files using:  
+If you encounter issues, you can manually copy the configuration files using:  
 ```sh
-cp -r waybar hypr wofi starship.toml kitty ~/.config/
-```
+cp -r waybar hyprland wofi starship.toml kitty ~/.config/
 

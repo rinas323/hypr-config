@@ -1,13 +1,12 @@
 #!/bin/bash
 
 # List of required dependencies
-dependencies=(starship wofi waybar hyprpaper hyprlock hypridle hyprshot kitty)
+dependencies=(starship wofi waybar hyprpaper hyprlock hypridle hyprshot kitty wget unzip)
 
-#font to install
+# Font to install
 font_name="Cascadia Code Nerd Font"
 font_url="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/CascadiaCode.zip"
 font_dir="$HOME/.local/share/fonts"
-
 
 # Function to check and install missing dependencies
 install_dependencies() {
@@ -19,8 +18,19 @@ install_dependencies() {
     done
     
     if [ ${#missing[@]} -ne 0 ]; then
-        echo "Installing missing dependencies: ${missing[*]}"
-        sudo pacman -S --needed "${missing[@]}"
+        if command -v pacman &> /dev/null; then
+            echo "Installing missing dependencies: ${missing[*]} (Arch-based system)"
+            sudo pacman -S --needed "${missing[@]}"
+        elif command -v apt &> /dev/null; then
+            echo "Installing missing dependencies: ${missing[*]} (Debian-based system)"
+            sudo apt install -y "${missing[@]}"
+        elif command -v dnf &> /dev/null; then
+            echo "Installing missing dependencies: ${missing[*]} (Red Hat-based system)"
+            sudo dnf install -y "${missing[@]}"
+        else
+            echo "Unsupported package manager. Please install the dependencies manually: ${missing[*]}"
+            exit 1
+        fi
     else
         echo "All dependencies are already installed."
     fi
@@ -41,7 +51,6 @@ backup_and_copy() {
     echo "Copied $src to ~/.config/"
 }
 
-
 # Function to install Cascadia Code Nerd Font
 install_font() {
     if [ ! -f "$font_dir/CascadiaCodeNerdFont-Regular.ttf" ]; then
@@ -56,7 +65,6 @@ install_font() {
     fi
 }
 
-
 # Ensure .config directory exists
 mkdir -p ~/.config
 
@@ -66,13 +74,13 @@ install_dependencies
 # Install Nerd Font
 install_font
 
-
 # Copy configuration files with backup
 backup_and_copy "hyprland" "~/.config/hyprland"
 backup_and_copy "waybar" "~/.config/waybar"
 backup_and_copy "wofi" "~/.config/wofi"
 backup_and_copy "starship.toml" "~/.config/starship.toml"
 backup_and_copy "kitty" "~/.config/kitty"
+
 # Copy wallpaper to .config root
 cp cosmic.jpg ~/.config/
 echo "Wallpaper copied to ~/.config/cosmic.jpg"
